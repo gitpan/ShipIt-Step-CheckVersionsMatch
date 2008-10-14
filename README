@@ -1,5 +1,5 @@
 NAME
-    Shipit::Step::CheckVersionsMatch - Check that all modules with a
+    ShipIt::Step::CheckVersionsMatch - Check that all modules with a
     $VERSION match
 
 SYNOPSIS
@@ -7,7 +7,7 @@ SYNOPSIS
 
 DESCRIPTION
     So the Moose distribution, of which I'm a maintainer, has a $VERSION in
-    every damn module (not my idea). This Shipit step checks to make sure
+    every damn module (not my idea). This ShipIt step checks to make sure
     that they all match.
 
 AUTHOR

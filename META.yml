@@ -1,6 +1,6 @@
 ---
 name: ShipIt-Step-CheckVersionsMatch
-version: 0.01
+version: 0.02
 author:
   - 'Dave Rolsky, C<< <autarch@urth.org> >>'
 abstract: Check that all modules with a $VERSION match
@@ -15,7 +15,7 @@ build_requires:
 provides:
   ShipIt::Step::CheckVersionsMatch:
     file: lib/ShipIt/Step/CheckVersionsMatch.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

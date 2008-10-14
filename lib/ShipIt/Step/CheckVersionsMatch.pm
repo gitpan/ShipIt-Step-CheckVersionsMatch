@@ -8,7 +8,7 @@ use base 'ShipIt::Step';
 use File::Find::Rule;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub run {
     my $self  = shift;
@@ -19,7 +19,7 @@ sub run {
     for my $mod ( File::Find::Rule->name('*.pm')->in('lib') )
     {
         my $version = $self->_version_from_file($mod);
-        next unless defined $version;
+        next unless defined $version && length $version;
 
         if ( $version ne $master_version )
         {
@@ -51,7 +51,7 @@ __END__
 
 =head1 NAME
 
-Shipit::Step::CheckVersionsMatch - Check that all modules with a $VERSION match
+ShipIt::Step::CheckVersionsMatch - Check that all modules with a $VERSION match
 
 =head1 SYNOPSIS
 
@@ -60,7 +60,7 @@ Shipit::Step::CheckVersionsMatch - Check that all modules with a $VERSION match
 =head1 DESCRIPTION
 
 So the Moose distribution, of which I'm a maintainer, has a
-C<$VERSION> in every damn module (not my idea). This Shipit step
+C<$VERSION> in every damn module (not my idea). This ShipIt step
 checks to make sure that they all match.
 
 =head1 AUTHOR
